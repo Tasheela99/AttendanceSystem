@@ -1,0 +1,216 @@
+/* register.css - Modern Styles for Registration Page */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #4a6cf7;
+    --primary-hover: #3a56e7;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+}
+
+.register-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.register-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.register-header {
+    padding: 30px 30px 20px;
+    text-align: center;
+    background: linear-gradient(to right, #4a6cf7, #6a93ff);
+    color: white;
+}
+
+.register-header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.register-form {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--dark-color);
+}
+
+label i {
+    margin-right: 5px;
+    color: var(--primary-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 12px 15px;
+    background: var(--light-color);
+    border: 1px solid #e1e5ea;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    transition: var(--transition);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.2);
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.select-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--secondary-color);
+    pointer-events: none;
+}
+
+.btn-register {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-register:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.btn-register i {
+    margin-right: 8px;
+}
+
+.register-footer {
+    padding: 15px 30px 30px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+
+.register-footer a {
+    color: var(--primary-color);
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.register-footer a:hover {
+    text-decoration: underline;
+}
+
+.alert {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.alert i {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.alert-success {
+    background-color: rgba(40, 167, 69, 0.15);
+    color: var(--success-color);
+    border-left: 4px solid var(--success-color);
+}
+
+.alert-error {
+    background-color: rgba(220, 53, 69, 0.15);
+    color: var(--error-color);
+    border-left: 4px solid var(--error-color);
+}
+
+@media (max-width: 480px) {
+    .register-header {
+        padding: 20px 20px 15px;
+    }
+
+    .register-form, .register-footer {
+        padding: 20px;
+    }
+
+    .register-header h1 {
+        font-size: 24px;
+    }
+}

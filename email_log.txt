@@ -1,0 +1,2 @@
+2025-03-24 17:12:17 - Email Error: SMTP Error: Could not connect to SMTP host. Failed to connect to server
+2025-03-24 17:18:46 - Email sent successfully to teachers about student Tasheela One (tasheelajayawickrama1999@gmail.com).

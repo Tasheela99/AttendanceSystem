@@ -1,0 +1,91 @@
+.attendance-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.date-picker {
+    padding: 10px 15px;
+    border: 1px solid var(--gray-light);
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.filter-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+th {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: var(--light);
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-present {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--success);
+}
+
+.status-absent {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--danger);
+}
+
+.status-late {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--warning);
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.no-records {
+    text-align: center;
+    padding: 30px;
+    color: var(--gray);
+    font-style: italic;
+}

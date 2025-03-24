@@ -1,0 +1,8 @@
+{
+    "require": {
+        "kreait/firebase-php": "^5.26",
+      "ext-curl": "*",
+      "ext-pdo": "*",
+        "phpmailer/phpmailer": "^6.9"
+    }
+}

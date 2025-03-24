@@ -1,0 +1,197 @@
+/* Attendance System CSS */
+:root {
+    --primary-color: #3498db;
+    --primary-dark: #2980b9;
+    --success-color: #2ecc71;
+    --warning-color: #f39c12;
+    --danger-color: #e74c3c;
+    --border-color: #e0e0e0;
+    --text-color: #333;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f5f7fa;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: var(--primary-color);
+    font-size: 28px;
+    display: inline-flex;
+    align-items: center;
+}
+
+header h1 i {
+    margin-right: 10px;
+}
+
+/* Main Content */
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    padding: 25px;
+}
+
+/* Message Styles */
+.message {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.message.success {
+    background-color: rgba(46, 204, 113, 0.2);
+    color: #27ae60;
+    border-left: 4px solid #27ae60;
+}
+
+.message.error {
+    background-color: rgba(231, 76, 60, 0.2);
+    color: #c0392b;
+    border-left: 4px solid #c0392b;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.status-options {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.status-option {
+    flex: 1;
+}
+
+.status-option input[type="radio"] {
+    display: none;
+}
+
+.status-option label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 10px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: normal;
+}
+
+.status-option label:hover {
+    border-color: var(--primary-color);
+}
+
+.status-option input[type="radio"]:checked + label {
+    border-color: var(--primary-color);
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+.status-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.status-icon.present {
+    color: var(--success-color);
+}
+
+.status-icon.absent {
+    color: var(--danger-color);
+}
+
+.status-icon.late {
+    color: var(--warning-color);
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Logout */
+.logout-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.logout-btn {
+    background-color: #e74c3c;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .status-options {
+        flex-direction: column;
+    }
+
+    .container {
+        margin: 20px auto;
+        padding: 15px;
+    }
+}

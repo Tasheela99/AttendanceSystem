@@ -1,0 +1,112 @@
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid var(--gray-light);
+    border-radius: 8px 0 0 8px;
+    font-family: inherit;
+}
+
+.search-btn {
+    padding: 10px 20px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.search-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+th {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+}
+
+tr:hover {
+    background-color: var(--light);
+}
+
+.action-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: var(--primary-light);
+    color: var(--primary);
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.action-btn:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.no-records {
+    text-align: center;
+    padding: 30px;
+    color: var(--gray);
+    font-style: italic;
+}
+
+.student-count {
+    color: var(--gray);
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.student-count span {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.error-message {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--danger);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
