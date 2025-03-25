@@ -7,7 +7,7 @@ CREATE TABLE users (
                        id INT PRIMARY KEY AUTO_INCREMENT,
                        name VARCHAR(255) NOT NULL,
                        role ENUM('student', 'teacher', 'admin') NOT NULL,
-                       fingerprint_template TEXT NOT NULL, -- AES-encrypted data
+                       fingerprint_template TEXT NULL, -- AES-encrypted data
                        email VARCHAR(255) UNIQUE,
                        password VARCHAR(255) NOT NULL, -- Added password field
                        fcm_token VARCHAR(255) NULL,    -- Added field to store FCM tokens
@@ -31,5 +31,3 @@ CREATE TABLE notifications (
                                timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
                                FOREIGN KEY (user_id) REFERENCES users(id)
 );
-
-ALTER TABLE users MODIFY fingerprint_template TEXT NULL;
