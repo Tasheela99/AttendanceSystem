@@ -48,15 +48,33 @@ function sendEmailToTeachers($pdo, $studentName, $studentEmail): void
 
             // Email content
             $mail->isHTML(true);
-            $mail->Body = "
-                <h3>Student Login Alert</h3>
-                <p>Student <strong>{$studentName}</strong> has logged in.</p>
-                <p>Details:</p>
-                <ul>
-                    <li>Email: {$studentEmail}</li>
-                    <li>Login Time: " . date('Y-m-d H:i:s') . "</li>
-                </ul>
-            ";
+            $mail->Body = '
+<div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f4f4f4;">
+    <div style="background-color: white; border-radius: 8px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <div style="background-color: #4a6cf7; color: white; text-align: center; padding: 15px; border-radius: 8px 8px 0 0;">
+            <h1 style="margin: 0; font-size: 24px;">Student Login Alert</h1>
+        </div>
+        
+        <div style="padding: 20px;">
+            <p style="margin-bottom: 15px;">Hello,</p>
+            <p style="margin-bottom: 15px;">A student has just logged into the AttendEase system. Here are the details:</p>
+            
+            <div style="background-color: #f9f9f9; border-left: 4px solid #4a6cf7; padding: 15px; margin-top: 20px;">
+                <p style="margin: 5px 0;"><strong>Student Name:</strong> ' . htmlspecialchars($studentName) . '</p>
+                <p style="margin: 5px 0;"><strong>Email:</strong> ' . htmlspecialchars($studentEmail) . '</p>
+                <p style="margin: 5px 0;"><strong>Login Time:</strong> ' . date('Y-m-d H:i:s') . '</p>
+            </div>
+            
+            <p style="margin-top: 20px;">Please log in to the system for more information.</p>
+        </div>
+        
+        <div style="text-align: center; color: #777; margin-top: 20px; font-size: 12px; border-top: 1px solid #eee; padding-top: 15px;">
+            <p style="margin: 5px 0;">&copy; ' . date('Y') . ' AttendEase. All rights reserved.</p>
+            <p style="margin: 5px 0;">This is an automated notification. Please do not reply.</p>
+        </div>
+    </div>
+</div>
+            ';
 
             if ($mail->send()) {
                 logEmailStatus("Email sent successfully to teachers about student {$studentName} ({$studentEmail}).");

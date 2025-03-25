@@ -2,3 +2,4 @@
 2025-03-25 09:57:54 - Attendance already marked for user ID 6 today.
 2025-03-25 10:00:11 - Login failed for email: tasheela@gmail.com
 2025-03-25 10:01:42 - Login failed for email: tasheela@gmail.com
+2025-03-25 10:37:56 - Attendance already marked for user ID 6 today.
