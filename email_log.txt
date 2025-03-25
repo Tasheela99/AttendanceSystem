@@ -7,3 +7,6 @@
 2025-03-24 19:14:24 - Email sent successfully to teachers about student Tasheela One (tasheelajayawickrama1999@gmail.com).
 2025-03-25 09:57:59 - Email sent successfully to teachers about student Tasheela One (tasheelajayawickrama1999@gmail.com).
 2025-03-25 10:38:01 - Email sent successfully to teachers about student Tasheela One (tasheelajayawickrama1999@gmail.com).
+2025-03-25 11:07:55 - No teachers found in the database to send an email.
+2025-03-25 11:09:17 - Email sent successfully to teachers about student dinuwan (dinu@gmail.com).
+2025-03-25 11:15:22 - Email sent successfully to teachers about student kulasinghe (kulasinghe@gmai.com).

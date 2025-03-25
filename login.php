@@ -32,8 +32,8 @@ function sendEmailToTeachers($pdo, $studentName, $studentEmail): void
             $mail->isSMTP();
             $mail->Host       = 'smtp.gmail.com';
             $mail->SMTPAuth   = true;
-            $mail->Username   = 'tasheelajay1999@gmail.com';  // Your Gmail address
-            $mail->Password   = 'xefo pjhe iwmi mqzh';    // Use an App Password (not your regular password)
+            $mail->Username   = '';
+            $mail->Password   = '';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port       = 587;
 
